@@ -1,0 +1,83 @@
+\documentclass[11pt,vertical]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{balance}
+\usepackage{microtype}
+\usepackage{booktabs,threeparttable}
+\usepackage{color}
+
+\setbeamercolor{navigationbar}{bg=white,fg=HGBRS}
+\setbeamertemplate{headline}
+
+\newenvironment{hhline}{\par\noindent\rule{\textwidth}{1.2pt}\\}{}
+
+\newcommand{\mytitlefoot}{\footnotesize Literature Seminar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usetheme{_hbrs_v1} %% reads beamertheme_customized.sty
+
+\title{ \textcolor{HBRS}{\Huge\textbf{Literature Seminar\\ \vspace{1cm} Presentation}} }
+\author{YOUR NAME}
+\date{Date}
+
+\begin{document}
+
+\frame{\titlepage}
+
+
+\begin{frame}{\small \textbf{SLIDE 1}}
+	
+	\begin{itemize}
+	    \item \Huge  $\backslash$Huge
+	    \item \huge  $\backslash$huge
+	    \item \LARGE $\backslash$LARGE
+	    \item \Large $\backslash$Large
+	    \item \large $\backslash$large
+	    \item \normalsize $\backslash$normalsize
+	    \item \small $\backslash$small
+	    \item \footnotesize $\backslash$footnotesize
+	    \item \scriptsize $\backslash$scriptsize
+	    \item \tiny $\backslash$tiny
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{\small \textbf{SLIDE 2}}
+	\centering
+	\includegraphics[width=5.0cm]{logo_hbrs}\vfill
+	\includegraphics[width=0.5\textwidth]{logo_hbrs}
+\end{frame}
+
+
+\begin{frame}{\small \textbf{SLIDE 3}}
+	\small
+	\begin{columns}
+	
+		\begin{column}{0.4\textwidth}
+			\begin{itemize}
+				\item Test 1
+				\item Test 2
+				\item Test 3
+				\item Test 4
+			\end{itemize}
+		\end{column}
+		
+		\begin{column}{0.4\textwidth}
+			\begin{enumerate}
+				\item \textcolor{red}{Example 1}
+				\item \textcolor{HBRS}{Example 2}
+				\item \textcolor{blue}{Example 3}
+				\item Example 4
+			\end{enumerate}
+		\end{column}
+		
+	\end{columns}
+	\vfill
+	\hhline
+	\LARGE
+	TEXT
+\end{frame}
+
+
+\end{document}

@@ -1,0 +1,93 @@
+\setbeamersize{text margin left=1em, text margin right=1em}
+
+\useoutertheme{infolines}
+\useinnertheme{rectangles}
+\usefonttheme{professionalfonts}
+
+%\setbeamercolor{mini frame}{bg=black,,fg=red,parent=section in head/foot}
+
+\setbeamercolor{title}{parent=normal text}
+\setbeamercolor{block title}{use=structure,fg=black,bg=structure.fg!20!bg}
+\setbeamercolor{block title alerted}{use=alerted text,fg=alerted text.fg,bg=alerted text.fg!20!bg}
+\setbeamercolor{block title example}{use=example text,fg=example text.fg,bg=example text.fg!20!bg}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!50!bg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!50!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!50!bg}
+
+\setbeamercolor{navigation symbols dimmed}{fg=red!80!black}
+\setbeamercolor{navigation symbols}{fg=red!80!black}
+
+\definecolor{HBRS}{RGB}{0,157,224}
+\definecolor{silver}{cmyk}{0.4,0.27,0.27,0}
+\newcommand{\optionalcolor}{white}
+
+%% Top Line
+\newbox\myline
+\setbox\myline=\hbox{\textcolor{HBRS}{\hskip7.2mm\rule{123mm}{2.0pt}}}
+\wd\myline=0pt
+
+%% Bottom Line
+\newbox\mythickline
+\setbox\mythickline=\hbox{\textcolor{HBRS}{\hskip2.5mm\rule{123mm}{2.0pt}}}
+\wd\mythickline=0pt
+
+%% Itemize
+\newcommand{\bwn}[1]{\scalebox{0.75}{\colorbox{HBRS}{\textcolor{white}{#1}}}}
+\newcommand{\bwns}[1]{\scalebox{0.75}{\colorbox{silver}{\textcolor{white}{#1}}}}
+\setbeamercolor{itemize item}{fg=HBRS,bg=white}
+\setbeamercolor{itemize subitem}{fg=silver,bg=white}
+\setbeamercolor{itemize subsubitem}{fg=silver,bg=white}
+
+%% Enumerate
+\setbeamercolor{enumerate items}{fg=HBRS,bg=white}
+\setbeamercolor{enumerate item}{fg=HBRS,bg=white}
+\setbeamertemplate{enumerate item}{\bwn{\insertenumlabel}}%
+\setbeamertemplate{enumerate subitem}{\bwns{\insertsubenumlabel}}%
+\setbeamertemplate{enumerate subsubitem}{\bwns{\insertsubsubenumlabel}}%
+
+\newbox\logo
+\newbox\bottomlogo
+\setbox\bottomlogo=\hbox{\includegraphics[width=27mm]{logo_hbrs.png}}
+
+\setbeamertemplate{frametitle}
+{%
+  \Large \textcolor{black}{\insertframetitle}
+  \hfill
+  \hspace{0cm}\mbox{}\\[-2mm]%
+  \mbox{}\hspace{-1cm}
+  \usebox\myline
+}
+
+%% Navigation bar at top
+\setbeamercolor{navigationbar}{bg=black,fg=white}
+\setbeamercolor{navigationbar}{bg=HBRS,fg=white}
+\setbeamertemplate{headline}
+
+\setbeamertemplate{footline}
+{%
+  \newbox{\obox}
+  \setbox\obox=\hbox{\textcolor{\optionalcolor}{\raisebox{1pt}{\ o}}}
+  \wd\obox=0pt
+  \dp\obox=0pt
+  \ht\obox=0pt
+  \usebox\obox
+  \renewcommand{\optionalcolor}{white}
+  \begin{beamercolorbox}{black}
+  \noindent\usebox\mythickline
+    \vskip5pt
+    \hspace{2.3mm}
+    \parbox{2.9cm}{%[t]
+ 	%\includegraphics[width=20mm]{logo_hbrs.pdf}
+    }
+    %\insertframenumber /\inserttotalframenumber
+    \hfill
+    \mytitlefoot
+    \hfill 
+    \parbox{2.9cm}{%[t]
+      \usebox\bottomlogo
+    }
+    \hspace{3pt}\mbox{}
+    \vskip5pt 
+  \end{beamercolorbox}%
+}
+\setbeamertemplate{navigation symbols}{}
