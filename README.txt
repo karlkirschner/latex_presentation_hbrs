@@ -15,4 +15,4 @@ Content:
 Note: all files need to be within the same directory to compile.
 
 Suggestions / Comments:
-Email: karl.kirschner @ h-brs.de
+karl.kirschner @ h-brs.de
