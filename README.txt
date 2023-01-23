@@ -11,6 +11,7 @@ Content:
 1. presentation.tex - Latex file for creating slides
 2. beamertheme_hbrs_v1.sty - style file for defining slide format
 3. logo_hbrs.png - example image file
+4. movie.mp4 - a small movie file
 
 Note: all files need to be within the same directory to compile.
 
