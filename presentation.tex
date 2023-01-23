@@ -3,8 +3,9 @@
 \usepackage[english]{babel}
 \usepackage{balance}
 \usepackage{microtype}
-\usepackage{booktabs,threeparttable}
+\usepackage{booktabs, threeparttable}
 \usepackage{color}
+\usepackage{multimedia}
 
 \setbeamercolor{navigationbar}{bg=white,fg=HGBRS}
 \setbeamertemplate{headline}
@@ -43,6 +44,7 @@
 
 \end{frame}
 
+
 \begin{frame}{\small \textbf{SLIDE 2}}
 	\centering
 	\includegraphics[width=5.0cm]{logo_hbrs}\vfill
@@ -51,6 +53,7 @@
 
 
 \begin{frame}{\small \textbf{SLIDE 3}}
+    \transfade
 	\small
 	\begin{columns}
 	
@@ -84,5 +87,39 @@
 
 \end{frame}
 
+
+\begin{frame}{\small \textbf{SLIDE 4}}
+    \transfade
+    A slide that includes a transion to it.
+
+    And includes an MP4 movie (requires \textcolor{HBRS}{multimedia} package)
+
+    \bigskip
+    \centering
+    \movie[width=3.5cm, height=3.3cm, poster, showcontrols=true]{}{./movie.mp4}
+
+\end{frame}
+
+
+%% slide transitions (added after \begin{frame} line - see example above)
+%% Infor and source: https://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf
+
+% \transblindshorizontal : Show the slide as if horizontal blinds were pulled away.
+% \transblindsvertical : Show the slide as if vertical blinds were pulled away.
+% \transboxin : Show the slide by moving to the center from all four sides.
+% \transboxout : Show the slide by showing more and more of a rectangular area that is centered on the slide center
+% \transcover : Show the slide by covering the content that was shown before
+% \transdissolve : Slowly dissolve what was shown before
+% \transfade : Show the slide by slowly fading what was shown before.
+% \transfly : Show the slide by letting the new content fly in before removing the old slide.
+% \transglitter : Glitter sweeps in specified direction
+% \transpush : Show the slide by pushing what was shown before off the screen using the new content.
+% \transreplace : Replace the previous slide directly (default behaviour).
+% \transsplitverticalin : Show the slide by sweeping two vertical lines from the sides inward.
+% \transsplitverticalout : Show the slide by sweeping two vertical lines from the center outward.
+% \transsplithorizontalin : Show the slide by sweeping two horizontal lines from the sides inward.
+% \transsplithorizontalout : Show the slide by sweeping two horizontal lines from the center outward.
+% \transwipe : Sweeps single line in specified direction
+% \transduration{2} : Show slide specified number of seconds
 
 \end{document}
