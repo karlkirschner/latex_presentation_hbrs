@@ -7,25 +7,17 @@
 \usepackage{color}
 \usepackage{multimedia}
 
-\setbeamercolor{navigationbar}{bg=white,fg=HGBRS}
-\setbeamertemplate{headline}
+\usetheme{_hbrs_v1} %% read beamertheme_hbrs_v1.sty
 
-\newenvironment{hhline}{\par\noindent\rule{\textwidth}{1.2pt}\\}{}
+\newcommand{\mytitlefoot}{\footnotesize Presentation Title}
+\title{ \textcolor{HBRS}{\Huge\textbf{Title of Your\\ \vspace{1cm} Presentation}} }
 
-\newcommand{\mytitlefoot}{\footnotesize Literature Seminar}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usetheme{_hbrs_v1} %% reads beamertheme_hbrs_v1.sty
-
-\title{ \textcolor{HBRS}{\Huge\textbf{Literature Seminar\\ \vspace{1cm} Presentation}} }
 \author{YOUR NAME}
 \date{Date}
 
 \begin{document}
 
 \frame{\titlepage}
-
 
 \begin{frame}{\small \textbf{SLIDE 1}}
 	
@@ -47,10 +39,46 @@
 
 \begin{frame}{\small \textbf{SLIDE 2}}
 	\centering
-	\includegraphics[width=5.0cm]{logo_hbrs}\vfill
+
+	Customized horizontal lines (from beamertheme\_hbrs\_v1.sty):
+	\lhline
+	\mhline
+	\shline
+
+	\vfill
+
+	The following is for vertical alignment of two images:
+	\lhline
+	\includegraphics[valign=m, width=3.0cm]{logo_hbrs}\hspace{1cm}
+	\includegraphics[valign=m, width=5.0cm]{logo_hbrs}
+	%% Altnerative approach:
+%	$\vcenter{\hbox{\includegraphics[height=0.7cm]{logo_hbrs}}}$\hspace{1cm}
+%	$\vcenter{\hbox{\includegraphics[height=1.2cm]{logo_hbrs}}}$
+	\lhline
+
+	\vfill
 	\includegraphics[width=0.5\textwidth]{logo_hbrs}
 \end{frame}
 
+\begin{frame}[fragile]{\small \textbf{Example - Docker (one possible approach)}}
+\small
+
+\vfill
+Example of a \textbf{\textcolor{HBRS}{environment.yml}} adding code to your presentation.
+%\tiny
+\begin{lstlisting}
+name: compchem_students
+channels:
+  - defaults
+dependencies:
+  - ipykernel
+  - <@\textcolor{red}{matplotlib}@>
+  - <@\textcolor{red}{openmm}@>
+#  - <@\textcolor{red}{ambertools}@>
+#  - pip
+prefix: /mnt/sdc1/miniconda3/envs/compchem_students
+\end{lstlisting}
+\end{frame}
 
 \begin{frame}{\small \textbf{SLIDE 3}}
     \transfade
@@ -70,14 +98,14 @@
 			\begin{enumerate}
 				\item \textcolor{red}{Example 1}
 				\item \textcolor{HBRS}{Example 2}
-				\item \textcolor{blue}{Example 3}
+				\item \textcolor{orange}{Example 3}
 				\item Example 4
 			\end{enumerate}
 		\end{column}
 		
 	\end{columns}
 	\vfill
-	\hhline
+	\lhline
 	\LARGE
 	TEXT
 	\vfill
@@ -87,6 +115,12 @@
 
 \end{frame}
 
+\begin{frame}{\small \textbf{Example - Student Install of a VM Image}}
+	\center
+	The following may not appear in TexMaker, but it should show up when the presentation PDF is opened using a PDF viewer (e.g. okular):
+	\vfill
+    \movie[width=8.5cm, height=5.0cm, poster, showcontrols=true]{}{movie_example.mp4}
+\end{frame}
 
 \begin{frame}{\small \textbf{SLIDE 4}}
     \transfade
