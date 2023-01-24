@@ -1,18 +1,3 @@
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{balance}
-\usepackage{microtype}
-\usepackage{booktabs,threeparttable}
-\usepackage{color}
-\usepackage[export]{adjustbox}
-\usepackage{multimedia}
-
-\usepackage{listings}
-\lstset{basicstyle=\ttfamily, frame=single, literate={~}{$\sim$}{1}, escapeinside={<@}{@>}}
-
-\setbeamercolor{navigationbar}{bg=white,fg=HGBRS}
-\setbeamertemplate{headline}
-
 \setbeamersize{text margin left=1em, text margin right=1em}
 
 \useoutertheme{infolines}
@@ -32,11 +17,9 @@
 \setbeamercolor{navigation symbols dimmed}{fg=red!80!black}
 \setbeamercolor{navigation symbols}{fg=red!80!black}
 
-\definecolor{HBRS}{RGB}{0, 157, 224}
-\definecolor{grey}{RGB}{105, 105, 105}
-\definecolor{silver}{cmyk}{0.4, 0.27, 0.27, 0}
-\definecolor{gold}{RGB}{255, 127, 0}
-
+\definecolor{HBRS}{RGB}{0,157,224}
+\definecolor{grey}{RGB}{105,105,105}
+\definecolor{silver}{cmyk}{0.4,0.27,0.27,0}
 \newcommand{\optionalcolor}{white}
 
 %% Citing Sources - allows you to \credit{several lines of Latex code}
@@ -52,12 +35,6 @@
 \setbox\mythickline=\hbox{\textcolor{HBRS}{\hskip2.5mm\rule{123mm}{2.0pt}}}
 \wd\mythickline=0pt
 
-%% Additional lines of various lengths
-\newenvironment{lhline}{\par\noindent\rule{\textwidth}{1.2pt}\\}{}
-\newenvironment{mhline}{\par\noindent\rule{0.5\textwidth}{1.2pt}\\}{}
-\newenvironment{shline}{\par\noindent\rule{0.25\textwidth}{1.2pt}\\}{}
-\newenvironment{dhline}{\par\noindent\rule{\textwidth}{1.2pt}\vspace{-0.2cm}\par\noindent\rule{\textwidth}{1.2pt}\\}{}
-
 %% Itemize
 \newcommand{\bwn}[1]{\scalebox{0.75}{\colorbox{HBRS}{\textcolor{white}{#1}}}}
 \newcommand{\bwns}[1]{\scalebox{0.75}{\colorbox{silver}{\textcolor{white}{#1}}}}
@@ -71,6 +48,8 @@
 \setbeamertemplate{enumerate item}{\bwn{\insertenumlabel}}%
 \setbeamertemplate{enumerate subitem}{\bwns{\insertsubenumlabel}}%
 \setbeamertemplate{enumerate subsubitem}{\bwns{\insertsubsubenumlabel}}%
+
+\setbeamercolor{description item}{fg=HBRS,bg=white}
 
 \newbox\logo
 \newbox\bottomlogo
